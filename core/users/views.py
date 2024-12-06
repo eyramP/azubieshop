@@ -107,15 +107,11 @@ class UserLoginView(APIView):
         if serrializer.is_valid():
             email = serrializer.validated_data['email']
             password = serrializer.validated_data['password']
-            password2 = serrializer.validated_data['confirm_password']
 
             try:
                 user = User.objects.get(email=email)
             except User.DoesNotExist:
                 return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
-
-            if not password == password2:
-                return Response({'error': 'Passwords do not match'}, status=status.HTTP_400_BAD_REQUEST)
 
             if not user.check_password(password):
                 return Response({'error': 'Invalid credientials'}, status=status.HTTP_400_BAD_REQUEST)
