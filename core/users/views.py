@@ -122,8 +122,8 @@ class UserLoginView(APIView):
 
             refresh = RefreshToken.for_user(user)
             return Response({
-                'access': refresh.access_token,
-                'refresh': refresh
+                'access': str(refresh.access_token),
+                'refresh': str(refresh)
             })
 
         return Response(serrializer.errors, status=status.HTTP_400_BAD_REQUEST)
