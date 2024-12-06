@@ -1,10 +1,13 @@
-import environ
+
 from datetime import timedelta
 import os
 
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
+
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +26,8 @@ DEBUG = os.getenv('DEBUG') == 'True'
 
 # DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+# ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 
 
 DJANGO_APPS = [
@@ -150,6 +154,7 @@ STATIC_ROOT = str(ROOT_DIR / 'staticfiles')
 
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = str(ROOT_DIR / 'mediafiles')
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -159,13 +164,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_URLS_REGEX = r'^api/.*$'
 AUTH_USER_MODEL = 'users.User'
 
-# CELERY_BROKER_URL = os.getenv('CELERY_BROKER')
-# CELERY_RESULT_BACKEND = CELERY_BROKER_URL
-# CELERY_ACCEPT_CONTENT = ['json']
-# CELERY_TASK_SERIALIZER = ['json']
-# CELERY_RESULT_SERIALIZER = ['json']
-# CELERY_RESULT_BACKEND_MAX_RETRIES = 10
-# CELERY_TASK_SEND_SENT_EVENT = True
 
 if USE_TZ:
     CELERY_TIMEZONE = TIME_ZONE
