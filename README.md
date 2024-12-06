@@ -7,8 +7,6 @@ AzubiShop is a Django-based API designed to support an e-commerce platform where
 - **User Authentication:** User registration, login, and JWT-based authentication.
 - **Product Catalog:** Browse, filter, and search products.
 - **Shopping Cart:** Add products to the shopping cart, update quantities, and remove items.
-- **Order Management:** Place orders, track order status, and manage order history.
-- **Reviews:** Users can leave reviews for products.
 - **Swagger API Documentation:** Access API endpoints and documentation via Swagger.
 
 ## Technologies Used
@@ -34,7 +32,7 @@ Make sure you have the following installed:
 
 ### Clone the Repository
 
-### Dashboard Endpoints
+### Admin Dashboard Endpoints
 - https://azubi-api-f33a9b794cdf.herokuapp.com/dashboard/
 
 ## API Endpoints
@@ -44,8 +42,10 @@ Make sure you have the following installed:
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/admin/login/
 
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/products/
--  - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/cart/
+- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/cart/
 
+## API Document (Swagger)
+- https://azubi-api-f33a9b794cdf.herokuapp.com/swagger/
 
 ```bash
 git clone https://github.com/yourusername/azubieshop.git
