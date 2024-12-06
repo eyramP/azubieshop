@@ -36,10 +36,10 @@ Make sure you have the following installed:
 - https://azubi-api-f33a9b794cdf.herokuapp.com/dashboard/
 
 ## API Endpoints
-- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/register/
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/admin/new/
-- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/login/
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/admin/login/
+- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/register/
+- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/login/
 
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/store/products/
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/store/cart/

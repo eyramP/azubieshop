@@ -34,13 +34,13 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
-    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0)),
+    # path('redoc/', schema_view.with_ui('redoc', cache_timeout=0)),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('api/v1/auth/user/', CustomUserDetailsView.as_view(), name='user_details'),
-    path('api/v1/auth/', include('dj_rest_auth.urls')),
-    path('api/v1/auth/registration/', include('dj_rest_auth.registration.urls')),
-    path('api/v1/auth/password/reset/confirm<uidb64>/<token>',
-         PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    # path('api/v1/auth/user/', CustomUserDetailsView.as_view(), name='user_details'),
+    # path('api/v1/auth/', include('dj_rest_auth.urls')),
+    # path('api/v1/auth/registration/', include('dj_rest_auth.registration.urls')),
+    # path('api/v1/auth/password/reset/confirm<uidb64>/<token>',
+    #      PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('api/v1/users/', include('core.users.urls')),
     path('api/v1/store/', include('core.store.urls'))
 ]
