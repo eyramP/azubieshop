@@ -41,8 +41,8 @@ Make sure you have the following installed:
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/login/
 - https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/users/admin/login/
 
-- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/products/
-- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/cart/
+- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/store/products/
+- https://azubi-api-f33a9b794cdf.herokuapp.com/api/v1/store/cart/
 
 ## API Document (Swagger)
 - https://azubi-api-f33a9b794cdf.herokuapp.com/swagger/
