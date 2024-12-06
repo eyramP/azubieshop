@@ -49,4 +49,3 @@ admin.site.site_header = 'Azubi Shopping Cart API'
 admin.site.site_title = 'Azubi Shopping Cart API Admin Portal'
 admin.site.index_title = 'Welcome to Azubi Shoping Cart Admin Portal'
 
-SITE_ID = 1
