@@ -149,12 +149,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = str(ROOT_DIR / 'staticfiles')
+# STATIC_URL = '/staticfiles/'
+# STATIC_ROOT = str(ROOT_DIR / 'staticfiles')
 
-MEDIA_URL = '/mediafiles/'
-MEDIA_ROOT = str(ROOT_DIR / 'mediafiles')
+# MEDIA_URL = '/mediafiles/'
+# MEDIA_ROOT = str(ROOT_DIR / 'mediafiles')
+# django_heroku.settings(locals())
+
+# HEROKU SETTINGS///////////////
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(ROOT_DIR, 'staticfiles')
+STATICFILES_DIRS = (os.path.join(ROOT_DIR, 'static'),)
 django_heroku.settings(locals())
+# HEROKU SETTINGS///////////////
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
